@@ -28,6 +28,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #020617;
+  background-image: radial-gradient(#1e293b 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #f8fafc;
 }
 
 h1 {

@@ -1,0 +1,227 @@
+.titanic *,
+.titanic *::before,
+.titanic *::after {
+  box-sizing: border-box;
+}
+
+.titanic {
+  max-width: 600px;
+  margin: 24px auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #0f172a; /* Dark blue background */
+  color: #f8fafc;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.titanic h2 {
+  margin-top: 0;
+  color: #60a5fa;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.titanic .status {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.titanic .status.success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.titanic .status.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.titanic .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.titanic label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.titanic .label-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.titanic .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.titanic .icon-small {
+  width: 1rem;
+  height: 1rem;
+}
+
+.titanic .number-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.titanic .number-control input {
+  margin-top: 0;
+  text-align: center;
+  flex: 1;
+  min-width: 0; /* Prevents flex item from overflowing */
+  width: 100%;
+}
+
+.titanic .number-control button {
+  flex: 0 0 auto;
+  padding: 0.75rem;
+  background-color: #334155;
+  color: #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titanic .number-control button:hover {
+  background-color: #475569;
+}
+
+.titanic input,
+.titanic select {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #f1f5f9;
+  font-size: 1rem;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.titanic input:focus,
+.titanic select:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.titanic .actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.titanic button {
+  flex: 1;
+  padding: 0.875rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.titanic button:first-child {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.titanic button:first-child:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.titanic button:first-child:disabled {
+  background-color: #1e293b;
+  color: #475569;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.titanic button:last-child {
+  background-color: #334155;
+  color: #e2e8f0;
+}
+
+.titanic .result-container {
+  grid-column: 1 / -1;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.titanic .result {
+  width: 100%;
+  padding: 1.25rem;
+  background-color: #1e293b;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  border: 1px solid #334155;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.titanic .result.placeholder {
+  background: transparent;
+  border: 1px dashed #334155;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titanic .result strong {
+  color: #e2e8f0;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.titanic .result em {
+  font-style: normal;
+  font-weight: bold;
+  color: #60a5fa;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
